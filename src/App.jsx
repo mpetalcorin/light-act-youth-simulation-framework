@@ -1,5 +1,5 @@
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import {
 
@@ -506,6 +506,13 @@ function SystemsMap() {
 }
 
 function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem("lightActTheme") || "dark");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("lightActTheme", theme);
+  }, [theme]);
+
 
   const [intensity, setIntensity] = useState(65);
 
@@ -529,7 +536,15 @@ function App() {
 
   return (
 
-    <main className="app">
+    <main className={`app ${theme === "light" ? "light-mode" : "dark-mode"}`}>
+      <button
+        type="button"
+        className="theme-toggle"
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      >
+        {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+        <span>{theme === "light" ? "Dark mode" : "Light mode"}</span>
+      </button>
 
       <section className="hero">
 
@@ -741,9 +756,9 @@ function App() {
 
                 <Tooltip />
 
-                <Line type="monotone" dataKey="control" strokeWidth={4} name="Active control" />
+                <Line type="monotone" dataKey="control" stroke="#2563eb" strokeWidth={4} name="Active control" dot={{ r: 5, fill: "#2563eb" }} />
 
-                <Line type="monotone" dataKey="lightAct" strokeWidth={4} name="LIGHT-ACT Youth" />
+                <Line type="monotone" dataKey="lightAct" stroke="#f97316" strokeWidth={4} name="LIGHT-ACT Youth" dot={{ r: 5, fill: "#f97316" }} />
 
               </RLineChart>
 
@@ -767,13 +782,13 @@ function App() {
 
                 <Tooltip />
 
-                <Area type="monotone" dataKey="sleep" strokeWidth={3} fillOpacity={0.25} />
+                <Area type="monotone" dataKey="sleep" stroke="#0284c7" fill="#38bdf8" strokeWidth={3} fillOpacity={0.35} />
 
-                <Area type="monotone" dataKey="activity" strokeWidth={3} fillOpacity={0.25} />
+                <Area type="monotone" dataKey="activity" stroke="#16a34a" fill="#22c55e" strokeWidth={3} fillOpacity={0.28} />
 
-                <Area type="monotone" dataKey="cortisol" strokeWidth={3} fillOpacity={0.25} />
+                <Area type="monotone" dataKey="cortisol" stroke="#d97706" fill="#f59e0b" strokeWidth={3} fillOpacity={0.25} />
 
-                <Area type="monotone" dataKey="hrv" strokeWidth={3} fillOpacity={0.25} />
+                <Area type="monotone" dataKey="hrv" stroke="#7c3aed" fill="#a855f7" strokeWidth={3} fillOpacity={0.24} />
 
               </AreaChart>
 
@@ -797,7 +812,7 @@ function App() {
 
                 <Tooltip />
 
-                <Bar dataKey="effect" radius={[0, 10, 10, 0]} />
+                <Bar dataKey="effect" radius={[0, 10, 10, 0]} fill="#ec4899" />
 
               </BarChart>
 
@@ -819,7 +834,7 @@ function App() {
 
                 <PolarRadiusAxis />
 
-                <Radar dataKey="value" strokeWidth={3} fillOpacity={0.35} />
+                <Radar dataKey="value" stroke="#14b8a6" fill="#5eead4" strokeWidth={3} fillOpacity={0.55} />
 
               </RadarChart>
 
@@ -843,11 +858,11 @@ function App() {
 
                 <Tooltip />
 
-                <Bar dataKey="baseline" />
+                <Bar dataKey="baseline" fill="#22c55e" radius={[8, 8, 0, 0]} />
 
-                <Bar dataKey="week10" />
+                <Bar dataKey="week10" fill="#f59e0b" radius={[8, 8, 0, 0]} />
 
-                <Bar dataKey="month12" />
+                <Bar dataKey="month12" fill="#ef4444" radius={[8, 8, 0, 0]} />
 
               </BarChart>
 
@@ -871,11 +886,11 @@ function App() {
 
                 <Tooltip />
 
-                <Line dataKey="small" strokeWidth={4} name="Small effect" />
+                <Line dataKey="small" stroke="#38bdf8" strokeWidth={4} name="Small effect" dot={{ r: 5, fill: "#38bdf8" }} />
 
-                <Line dataKey="medium" strokeWidth={4} name="Medium effect" />
+                <Line dataKey="medium" stroke="#f97316" strokeWidth={4} name="Medium effect" dot={{ r: 5, fill: "#f97316" }} />
 
-                <Line dataKey="large" strokeWidth={4} name="Large effect" />
+                <Line dataKey="large" stroke="#22c55e" strokeWidth={4} name="Large effect" dot={{ r: 5, fill: "#22c55e" }} />
 
               </RLineChart>
 
@@ -899,7 +914,7 @@ function App() {
 
                 <Tooltip />
 
-                <Bar dataKey="importance" radius={[0, 10, 10, 0]} />
+                <Bar dataKey="importance" fill="#8b5cf6" radius={[0, 10, 10, 0]} />
 
               </BarChart>
 
@@ -926,6 +941,8 @@ function App() {
                 <Tooltip cursor={{ strokeDasharray: "3 3" }} />
 
                 <Scatter
+                  fill="#f97316"
+                  stroke="#7c2d12"
 
                   data={[
 
