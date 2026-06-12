@@ -155,3 +155,8 @@ A future real-world model should be governed by a clinical trial protocol, data 
 ## Summary Statement
 
 The LIGHT-ACT Youth responder model is a **simulation-based, interpretable machine learning demonstration** designed to support trial planning and hypothesis generation. It is not a clinical prediction tool. Its value lies in showing how future trials could integrate symptom outcomes, wearable-derived rhythm measures, biomarkers, contextual variables, and interpretable prediction to understand heterogeneity of response in adolescent anxiety and depression.
+
+## Citation
+
+```text
+Petalcorin, M.I.R. (2026). LIGHT-ACT Youth simulated dataset for circadian and physical activity intervention planning in adolescent anxiety and depression. GitHub repository. https://github.com/mpetalcorin/light-act-youth-simulation-framework
