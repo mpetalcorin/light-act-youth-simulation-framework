@@ -15,7 +15,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
+
 # LIGHT-ACT Youth: Simulation Framework for Circadian and Physical Activity Intervention in Adolescent Anxiety and Depression
 
 ## Overview
@@ -197,16 +197,13 @@ This repository is not intended for clinical diagnosis, treatment recommendation
 ## Citation
 
 ```text
-Petalcorin, M. I. R. LIGHT-ACT Youth: A simulation framework for circadian and physical activity intervention design in adolescent anxiety and depression. GitHub repository.
+Petalcorin, M.I.R. (2026). LIGHT-ACT Youth: A simulation framework for circadian and physical activity intervention design in adolescent anxiety and depression. GitHub repository.
 ```
 
-## License
-
-Add the appropriate open-source license for your intended use, for example MIT, Apache 2.0, or CC BY 4.0 for manuscript-style materials.
 
 ## Contact
 
-**Author:** Mark Ihrwell R. Petalcorin  
+**Author:** Mark I.R. Petalcorin  
 **Project:** LIGHT-ACT Youth  
 **Focus:** Circadian regulation, physical activity, wearable analytics, adolescent anxiety and depression, simulation-based trial design
 >>>>>>> c4b7b985cb82047859a52919a168709274f6cc70
