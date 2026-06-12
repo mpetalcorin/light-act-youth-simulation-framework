@@ -28,7 +28,7 @@ The dataset allows researchers to test analysis code and refine causal assumptio
 
 ## Dataset Creators
 
-**Mark Ihrwell R. Petalcorin**
+**Mark I.R. Petalcorin**
 
 Project: LIGHT-ACT Youth  
 Focus: Circadian regulation, physical activity, wearable analytics, adolescent anxiety and depression, mechanistic trial simulation
@@ -223,11 +223,11 @@ Future empirical data access should be controlled and governed by ethics approva
 ## Suggested Citation
 
 ```text
-Petalcorin, M. I. R. LIGHT-ACT Youth simulated dataset for circadian and physical activity intervention planning in adolescent anxiety and depression. GitHub repository.
+Petalcorin, M.I.R.(2026). LIGHT-ACT Youth simulated dataset for circadian and physical activity intervention planning in adolescent anxiety and depression. GitHub repository. https://github.com/mpetalcorin/light-act-youth-simulation-framework
 ```
 
 ## Contact
 
-**Author:** Mark Ihrwell R. Petalcorin  
+**Author:** Mark I.R. Petalcorin  
 **Project:** LIGHT-ACT Youth  
 **Purpose:** Simulation-based trial design for adolescent anxiety and depression research
