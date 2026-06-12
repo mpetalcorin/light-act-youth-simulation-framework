@@ -1,100 +1,193 @@
-# Python Refresher: Brushing Off the Dust — My Journey
+# LIGHT-ACT Youth: Simulation Framework for Circadian and Physical Activity Intervention in Adolescent Anxiety and Depression
 
-Welcome to my Python Refresher notebook! This marks the beginning of my hands-on transition into the world of **machine learning**, one foundational brick at a time.
+## Overview
 
----
+**LIGHT-ACT Youth** is a reproducible simulation and trial-design framework for a proposed mechanistic intervention targeting anxiety and depressive symptoms in young people aged 10 to 18 years. The framework integrates **morning light exposure**, **sleep-wake regularisation**, **structured physical activity**, and **routine-based behavioural support** with wearable-derived rhythm measures, biomarker hypotheses, causal mediation analysis, moderation testing, missing-data modelling, and interpretable responder prediction.
 
-## Why Python?
+This repository supports the development of a future randomised controlled trial by showing how clinical outcomes, biological mediators, behavioural rhythms, implementation factors, and predictive modelling can be analysed together before empirical data collection begins.
 
-Python is powerful, readable, and flexible — a language designed by Guido van Rossum in the late 1980s with simplicity at its core (van Rossum, 1991). Whether you're building websites, analyzing data, or training AI models, Python gets the job done.
+The project is **not a completed clinical trial** and does **not** provide medical advice. All current numerical results are simulated and are intended for planning, hypothesis refinement, methodological demonstration, and reproducible grant-development work.
 
----
+## Scientific Rationale
 
-## Day 1: Revisiting the Fundamentals
+Adolescent anxiety and depression often emerge during a developmental period in which sleep timing, circadian phase, school demands, physical activity, peer relationships, digital exposure, stress physiology, and emotional regulation are changing rapidly. LIGHT-ACT Youth is based on the hypothesis that symptoms may be partly maintained by instability in the 24-hour rhythm system.
 
-### Jupyter Notebooks: My Interactive Lab
-Jupyter Notebooks felt like a virtual lab bench — where I could mix code, outputs, and notes in one interactive space. Thanks to the scientific community and UC Berkeley (Kluyver et al., 2016), this tool has become essential in computational science.
+The framework models four intervention components as interacting biological and behavioural signals:
 
-### Data Types
-Like tools in a toolbox — numbers (integers, floats), text (strings), and true/false values (booleans) — understanding types is critical. In machine learning, your model is only as smart as the data types it’s given.
+1. **Morning light exposure**, designed to strengthen circadian entrainment through retinal melanopsin pathways and the suprachiasmatic nucleus.
+2. **Sleep-wake regularisation**, designed to stabilise sleep timing, reduce social jet lag, and improve rhythm consistency.
+3. **Structured physical activity**, designed to increase activity-rest rhythm amplitude, improve sleep pressure, reduce fatigue, and support autonomic and metabolic regulation.
+4. **Routine-based behavioural support**, designed to reduce avoidance, support habit formation, improve self-efficacy, and improve emotional regulation.
 
-### Lists, Indexing, and Collections
-Lists are ordered collections, like boxes of labeled items. I practiced indexing and even nested lists. Then came **tuples** (immutable lists) and **dictionaries** — fast lookup tools that store key-value pairs (e.g., country codes).
+At the molecular and physiological levels, the framework links these components to circadian clock regulation, melatonin timing, HPA-axis function, cortisol rhythm, autonomic regulation, inflammatory tone, mitochondrial energy signalling, neuroplasticity, rumination, fatigue, and emotional-control circuits.
 
----
+At the systems level, the model recognises that intervention feasibility is shaped by family routines, school schedules, neighbourhood safety, socioeconomic context, digital exposure, peer relationships, cultural expectations, and access to youth support.
 
-## Python for Problem Solving
+## Repository Contents
 
-### Functions: Reusable Recipes
-Functions simplify complex problems. I wrote a Celsius-to-Fahrenheit converter and reflected on **modularity** in programming (Parnas, 1972) — the power of writing once and reusing often.
+```text
+LIGHT-ACT-Youth/
+├── README.md
+├── MODELCARD.md
+├── DATASHEET.md
+├── LICENSE
+├── requirements.txt
+├── notebooks/
+│   └── LIGHT_ACT_Youth_Grant_Analytics_Notebook_FIXED.ipynb
+├── data/
+│   ├── simulated_light_act_youth_data.csv
+│   └── README_data.md
+├── figures/
+│   ├── figure_1_symptom_trajectory.png
+│   ├── figure_2_sleep_regularity.png
+│   ├── figure_3_activity_rest_rhythm.png
+│   ├── figure_4_cortisol_rhythm.png
+│   ├── figure_5_hrv_trajectory.png
+│   ├── figure_6_power_simulation.png
+│   ├── figure_7_mediation_analysis.png
+│   ├── figure_8_moderation_analysis.png
+│   ├── figure_9_missingness.png
+│   ├── figure_10_roc_curve.png
+│   └── figure_11_permutation_importance.png
+├── manuscript/
+│   └── LIGHT_ACT_Youth_Integrated_Two_Column_Manuscript.docx
+└── src/
+    ├── simulate_trial_data.py
+    ├── analyse_longitudinal_outcomes.py
+    ├── mediation_analysis.py
+    ├── moderation_analysis.py
+    ├── responder_prediction.py
+    └── plot_results.py
+```
 
-### Loops & Conditionals
-Loops automate tasks; conditionals introduce logic. From checking if a number was positive or negative to looping over lists, I saw how these constructs mirror human decision-making.
+## Main Analytical Components
 
----
+- Baseline participant simulation
+- Randomised group allocation
+- Simulated anxiety/depression symptom trajectories
+- Sleep regularity modelling
+- Activity-rest rhythm modelling
+- Cortisol rhythm modelling
+- Heart-rate variability trajectory simulation
+- Power simulation across standardised effect sizes
+- Mediation analysis of candidate mechanisms
+- Moderation analysis by baseline rhythm disruption
+- Missing-data profiling across questionnaires, wearables, and biomarkers
+- Responder prediction using interpretable machine learning
+- Permutation importance for model interpretation
+- Publication-style figure and table outputs
 
-## ⚡ Leveling Up with Libraries
+## Example Research Questions
 
-### NumPy: Math at Lightning Speed
-NumPy arrays replaced slow loops with vectorized operations, enabling powerful numerical computation (Oliphant, 2006). Multiplying arrays became as simple as `a * b`.
+1. Could a combined circadian and physical activity intervention produce greater symptom improvement than active control?
+2. Are improvements in anxiety and depressive symptoms plausibly mediated by sleep regularity, activity-rest rhythm, cortisol rhythm, HRV, fatigue, rumination, or inflammation?
+3. Do young people with greater baseline rhythm disruption respond differently to the intervention?
+4. What sample size may be required to detect clinically meaningful symptom differences?
+5. Which data streams are most vulnerable to missingness?
+6. Can interpretable machine learning identify candidate responder profiles without replacing clinical judgement?
 
-### pandas: Structured Data Wrangling
-pandas turned raw CSV files into organized, filterable tables — thanks to Wes McKinney (2012). With `DataFrame` objects, slicing, grouping, and visualizing data became second nature.
+## Installation
 
----
+Clone the repository:
 
-## Reflecting on the Journey
+```bash
+git clone https://github.com/YOUR_USERNAME/LIGHT-ACT-Youth.git
+cd LIGHT-ACT-Youth
+```
 
-This refresher wasn’t just about syntax. It taught me **how to think in Python**:
+Create a virtual environment:
 
-- Use **functions** to break down problems.
-- Apply **loops and conditionals** for logic.
-- Store and access **data structures** effectively.
-- Use **NumPy and pandas** for fast, real-world computation.
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
 
-These tools are the pillars of every machine learning pipeline I’ll build next.
+Install dependencies:
 
----
+```bash
+pip install -r requirements.txt
+```
 
-## Diagrams
+Suggested `requirements.txt`:
 
-### Figure 1.1: Essential Python Concepts for ML Foundations
-A mind map showing Python at the center, branching into:
-- **Data Types**
-- **Functions**
-- **Loops & Conditionals**
-- **NumPy & pandas**
+```text
+numpy
+pandas
+matplotlib
+scikit-learn
+scipy
+jupyter
+notebook
+```
 
-Each node reinforces a core skill required in data science.
+Optional:
 
-### Figure 1.2: Python Skills Flowchart
-A step-by-step flowchart:
-1. Intro to Python’s Design Philosophy
-2. Jupyter Notebooks
-3. Data Types & Structures
-4. Reusable Functions
-5. Loops & Conditionals
-6. NumPy & pandas
+```text
+statsmodels
+seaborn
+```
 
-Every step is a scaffold to mastering machine learning workflows.
+The fixed notebook is designed to run even if `statsmodels` is unavailable, using fallback regression and mediation calculations.
 
----
+## Running the Notebook
 
-## References
+```bash
+jupyter notebook
+```
 
-- Kernighan, B. W., & Ritchie, D. M. (1978). *The C Programming Language*. Prentice-Hall.
-- Kluyver, T., et al. (2016). *Jupyter Notebooks – a publishing format for reproducible computational workflows*. IOS Press.
-- McKinney, W. (2012). *Python for Data Analysis*. O’Reilly Media.
-- Oliphant, T. E. (2006). *A Guide to NumPy*. Trelgol Publishing.
-- Parnas, D. L. (1972). *On the criteria to be used in decomposing systems into modules*. CACM.
-- van Rossum, G. (1991). *Python Reference Manual*. Centrum voor Wiskunde en Informatica.
+Open:
 
----
+```text
+notebooks/LIGHT_ACT_Youth_Grant_Analytics_Notebook_FIXED.ipynb
+```
 
-## Next Up
+Run all cells to generate simulated datasets, figures, summary tables, and exploratory modelling outputs.
 
-Tomorrow, I step into the world of **Machine Learning**. But today, I sharpened my tools — and that makes all the difference.
+## Outputs
 
----
+- Simulated baseline participant characteristics
+- Longitudinal symptom plots
+- Mechanistic mediator plots
+- Power simulation curves
+- Mediation effect estimates
+- Moderation regression outputs
+- Missingness summaries
+- ROC curve for responder prediction
+- Permutation importance plot
+- Manuscript-ready figure legends and table captions
 
-*Built with 💡 in Jupyter, by a learner embracing the craft.*
+## Interpretation Notes
+
+All results are simulated. They should not be interpreted as evidence that LIGHT-ACT Youth is clinically effective.
+
+The simulation is intended to support grant planning, clarify causal assumptions, test analysis workflows, estimate feasibility, identify likely measurement challenges, prepare a future preregistered trial, and demonstrate transparent, reproducible methodology.
+
+A real trial would require ethical approval, safeguarding procedures, lived-experience co-design, recruitment feasibility testing, intervention fidelity monitoring, clinical oversight, data governance, statistical preregistration, and independent evaluation.
+
+## Ethical and Safeguarding Considerations
+
+Because this framework concerns young people and mental health, future empirical work should include youth and caregiver involvement, safeguarding protocols, clear consent and assent procedures, data minimisation, privacy-preserving wearable data handling, clinical escalation pathways, inclusive recruitment, accessibility planning, and careful management of biological sampling burden.
+
+## Intended Use
+
+This repository is intended for grant development, simulation-based trial planning, academic methods demonstration, mechanistic intervention design, reproducible mental health data science, and training in wearable-guided clinical trial analytics.
+
+## Not Intended For
+
+This repository is not intended for clinical diagnosis, treatment recommendation, replacement of professional mental health care, automated intervention allocation, real-world prediction without validation, or use with identifiable youth data without ethics approval.
+
+## Citation
+
+```text
+Petalcorin, M. I. R. LIGHT-ACT Youth: A simulation framework for circadian and physical activity intervention design in adolescent anxiety and depression. GitHub repository.
+```
+
+## License
+
+Add the appropriate open-source license for your intended use, for example MIT, Apache 2.0, or CC BY 4.0 for manuscript-style materials.
+
+## Contact
+
+**Author:** Mark Ihrwell R. Petalcorin  
+**Project:** LIGHT-ACT Youth  
+**Focus:** Circadian regulation, physical activity, wearable analytics, adolescent anxiety and depression, simulation-based trial design
